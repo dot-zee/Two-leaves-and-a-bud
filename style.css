@@ -219,41 +219,210 @@ main{
 
 #section-1{
     width: 100%;
-    height: 85vh;
-    background-image: url(https://www.twoleavestea.com/cdn/shop/files/matcha_mobile.png?v=1779455800&width=1350.0);
+    min-height: 100vh;
+
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2250.0);
     background-size: cover;
     background-position: center;
+
+    position: relative;
+
     display: flex;
-    justify-content: end;
+    align-items: flex-end;
+
+    padding: 4rem 2.5rem;
+
+    overflow: hidden;
+}
+
+#section-1::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.12) 0%,
+        rgba(0,0,0,0.04) 30%,
+        rgba(0,0,0,0) 60%
+    );
+}
+
+#section-1 .hero-content{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    display: flex;
     flex-direction: column;
-    padding: 3rem 0.5rem;
-    gap: 1rem;
-    text-align: center;
-    border-bottom: 1px solid #000;
+    align-items: flex-start;
 }
 
 #section-1 h1{
-    font-size: clamp(3.5rem,5vw,5rem);
     font-family: Reckless;
-    color: black;
-    font-weight: 500;
+    font-size: clamp(4rem,7vw,8rem);
+    line-height: 0.92;
+    font-weight: 300;
+
+    color: #FFF8ED;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 2rem;
+
+    max-width: 560px;
 }
 
 #section-1 p{
-    font-size: clamp(1.2rem,1vw,1rem);
     font-family: Figtree;
+    font-size: clamp(1rem,1.2vw,1.4rem);
+    line-height: 1.5;
     font-weight: 400;
-    color: black;
+
+    color: rgba(255,255,255,0.96);
+
+    width: 100%;
+    max-width: 540px;
+
+    margin-bottom: 2rem;
 }
 
 #section-1 button{
-    padding: 1.2rem;
     border: none;
-    background-color: #2A2857;
+    outline: none;
+
+    background-color: #2D2860;
     color: white;
+
+    padding: 1.2rem 3.5rem;
+
+    border-radius: 999px;
+
     font-family: Figtree;
-    border-radius: 1.2rem;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all ease 0.3s;
+}
+
+#section-1 button:hover{
+    transform: translateY(-3px);
+    background-color: #201B4F;
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width:1024px){
+
+    #section-1{
+        padding: 5rem 3rem;
+        align-items: center;
+    }
+
+    #section-1 .hero-content{
+        margin-top: 18rem;
+    }
+
+    #section-1 h1{
+        max-width: 540px;
+    }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:1023px){
+
+    #section-1{
+        min-height: 92vh;
+        padding: 3rem 1.5rem;
+    }
+
+    #section-1 h1{
+        font-size: clamp(3.5rem,10vw,5.5rem);
+        margin-bottom: 1.5rem;
+    }
+
+    #section-1 p{
+        margin-bottom: 1.8rem;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    #section-1{
+        min-height: 100vh;
+
+        background-image: url(https://www.twoleavestea.com/cdn/shop/files/matcha_mobile.png?v=1779455800&width=1350.0);
+
+        background-position: center;
+
+        padding: 2rem 1.2rem;
+
+        align-items: flex-end;
+    }
+
+    #section-1::before{
+        background: linear-gradient(
+            180deg,
+            rgba(0,0,0,0.08) 0%,
+            rgba(0,0,0,0.18) 100%
+        );
+    }
+
+    #section-1 .hero-content{
+        width: 100%;
+        max-width: 340px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-top: auto;
+        margin-bottom: 1rem;
+    }
+
+    #section-1 h1{
+        font-size: clamp(4rem,16vw,5.5rem);
+
+        line-height: 0.9;
+
+        letter-spacing: -3px;
+
+        max-width: 320px;
+
+        word-break: keep-all;
+
+        margin-bottom: 1.2rem;
+    }
+
+    #section-1 p{
+        font-size: 1.05rem;
+        line-height: 1.45;
+
+        max-width: 290px;
+
+        margin-top: 0.5rem;
+        margin-bottom: 1.8rem;
+    }
+
+    #section-1 button{
+        width: fit-content;
+
+        padding: 1rem 2.2rem;
+
+        font-size: 1rem;
+    }
 }
 
 /* =========================================
