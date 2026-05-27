@@ -12,29 +12,38 @@
 
 <body>
   <main>
-    <nav>
-      <i id="menu-icon" class="ri-menu-line"></i>
-      <div class="nav-part-1">
-        <h3>Shop</h3>
-        <h3>Learn</h3>
-        <h3>Reviews</h3>
-      </div>
-      <div class="nav-part-2">
-        <img src="https://www.twoleavestea.com/cdn/shop/files/Twoleaves_logo.svg?v=1768205424&width=420" alt="" />
-      </div>
-      <div class="nav-part-3">
-        <h3>My Account</h3>
-        <h3>Cafe & Wholesale Partners</h3>
-        <h3>Tea Journal</h3>
-        <svg width="18" height="31" viewBox="0 0 18 31" fill="none" xmlns="http://www.w3.org/2000/svg"
-          data-acsb-hidden="true" role="presentation">
-          <path d="M21.5 10V24.5C21.5 27.5376 19.0376 30 16 30H6C2.96243 30 0.5 27.5376 0.5 24.5V10H21.5Z"
-            stroke="#201C1A"></path>
-          <path d="M5 9.5V6.5C5 3.18629 7.68629 0.5 11 0.5C14.3137 0.5 17 3.18629 17 6.5V9.5" stroke="#201C1A"></path>
-        </svg>
-      </div>
-    </nav>
 
+    <nav class="tl-navbar">
+
+      <div class="tl-nav-left">
+        <a href="#">Shop <span>⌄</span></a>
+        <a href="#">Learn <span>⌄</span></a>
+        <a href="#">Reviews <span>★</span></a>
+      </div>
+
+      <div class="tl-nav-center">
+        <img src="https://www.twoleavestea.com/cdn/shop/files/Twoleaves_logo.svg?v=1768205424&width=420" alt="logo">
+      </div>
+
+      <div class="tl-nav-right">
+        <a href="#">MY ACCOUNT</a>
+        <a href="#">CAFE & WHOLESALE PARTNERS</a>
+        <a href="#">TEA JOURNAL</a>
+
+        <div class="tl-cart-wrap">
+
+          <svg width="20" height="30" viewBox="0 0 18 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.5 10V24.5C21.5 27.5376 19.0376 30 16 30H6C2.96243 30 0.5 27.5376 0.5 24.5V10H21.5Z"
+              stroke="#201C1A"></path>
+            <path d="M5 9.5V6.5C5 3.18629 7.68629 0.5 11 0.5C14.3137 0.5 17 3.18629 17 6.5V9.5" stroke="#201C1A"></path>
+          </svg>
+
+          <span class="tl-cart-count">0</span>
+
+        </div>
+      </div>
+
+    </nav>
     <section id="section-1">
       <h1>Cere-Memorial <br> Day Sale.</h1>
       <p>
@@ -106,8 +115,7 @@
         </div>
         <div class="card">
           <div class="card-top bg-[#B0E8C1]">
-            <img
-              src="https://www.twoleavestea.com/cdn/shop/files/peppermint_naked_featured.webp?v=1771580547&width=900"
+            <img src="https://www.twoleavestea.com/cdn/shop/files/peppermint_naked_featured.webp?v=1771580547&width=900"
               alt="">
             <div class="card-top-text">
               <button>TEA Sachets</button>
@@ -126,9 +134,7 @@
         </div>
         <div class="card">
           <div class="card-top bg-[#C1E4F8]">
-            <img
-              src="https://www.twoleavestea.com/cdn/shop/files/Bamboo_Tea_Chest.webp?v=1772543139&width=600"
-              alt="">
+            <img src="https://www.twoleavestea.com/cdn/shop/files/Bamboo_Tea_Chest.webp?v=1772543139&width=600" alt="">
             <div class="card-top-text">
               <button>TEA Sachets</button>
               <span><i class="ri-star-s-fill"></i> 4.71 (84)</span>
@@ -146,9 +152,7 @@
         </div>
         <div class="card">
           <div class="card-top bg-[#C0E571]">
-            <img
-              src="//www.twoleavestea.com/cdn/shop/files/Latte_Mix.webp?v=1771386671&width=600"
-              alt="">
+            <img src="//www.twoleavestea.com/cdn/shop/files/Latte_Mix.webp?v=1771386671&width=600" alt="">
             <div class="card-top-text">
               <button>TEA Sachets</button>
               <span><i class="ri-star-s-fill"></i> 4.71 (84)</span>
@@ -206,9 +210,7 @@
         </div>
         <div class="card">
           <div class="card-top bg-[#CCE3FF]">
-            <img
-              src="//www.twoleavestea.com/cdn/shop/files/Naked_Tea.webp?v=1771401766&width=600"
-              alt="">
+            <img src="//www.twoleavestea.com/cdn/shop/files/Naked_Tea.webp?v=1771401766&width=600" alt="">
             <div class="card-top-text">
               <button>TEA Sachets</button>
               <span><i class="ri-star-s-fill"></i> 4.71 (84)</span>
@@ -226,8 +228,7 @@
         </div>
         <div class="card">
           <div class="card-top bg-[#AEE0F9]">
-            <img
-              src="//www.twoleavestea.com/cdn/shop/files/alpine_berry_naked_featured.webp?v=1771496640&width=600"
+            <img src="//www.twoleavestea.com/cdn/shop/files/alpine_berry_naked_featured.webp?v=1771496640&width=600"
               alt="">
             <div class="card-top-text">
               <button>TEA Sachets</button>
@@ -249,6 +250,219 @@
       <div class="btn-container">
         <button class="btm-btn">Explore All Teas</button>
       </div>
+    </section>
+
+    <section class="tl-discover-section">
+
+      <div class="tl-discover-badge">
+        <span>DISCOVER</span>
+      </div>
+
+      <div class="tl-discover-heading">
+        <h1>
+          Let’s find a cup that fits the <em>moment.</em><br>
+          What are you searching for?
+        </h1>
+      </div>
+
+      <div class="tl-search-wrap">
+        <input type="text" placeholder="green tea" class="tl-search-input">
+      </div>
+
+      <div class="tl-vibe-label">
+        <p>OR EXPLORE BY VIBE...</p>
+      </div>
+
+      <div class="tl-chip-container">
+
+        <button class="tl-chip">A Sweet Treat</button>
+        <button class="tl-chip">Evening Unwind</button>
+        <button class="tl-chip">Focused & Clear</button>
+        <button class="tl-chip">Caffeine!</button>
+        <button class="tl-chip">Caffeine-Free</button>
+
+        <button class="tl-chip">Ceremony-Worthy</button>
+        <button class="tl-chip">Whole Leaf</button>
+        <button class="tl-chip">Over Ice</button>
+        <button class="tl-chip">Lattes</button>
+        <button class="tl-chip">Black Tea</button>
+        <button class="tl-chip">Green Tea</button>
+
+        <button class="tl-chip">Herbal Tea</button>
+        <button class="tl-chip">Organic</button>
+        <button class="tl-chip">Barista Favorite</button>
+        <button class="tl-chip">Calm & Cozy</button>
+        <button class="tl-chip">Fruit Forward</button>
+
+      </div>
+
+    </section>
+
+    <section class="tl-reviews-section">
+
+      <!-- Badge -->
+      <div class="tl-reviews-badge">
+        <span>REVIEWS</span>
+      </div>
+
+      <!-- Heading -->
+      <div class="tl-reviews-heading">
+        <h1>
+          Loved by tea people <em>everywhere.</em><br>
+          Here's what they're saying.
+        </h1>
+      </div>
+
+      <!-- Review Cards -->
+      <div class="tl-review-grid">
+
+        <!-- Card 1 -->
+        <div class="tl-review-card tl-peach">
+
+          <div class="tl-review-content">
+            <h2>
+              “The right amount<br>
+              of spice.”
+            </h2>
+
+            <p>Angelina R.</p>
+          </div>
+
+          <div class="tl-review-product">
+            <div class="tl-review-product-left">
+              <img
+                src="https://www.twoleavestea.com/cdn/shop/files/organic_high_mountain_chai_tea_sachet_featured.webp?v=1771578289&width=600"
+                alt="">
+
+              <span>
+                ORGANIC<br>
+                MOUNTAIN<br>
+                HIGH CHAI
+              </span>
+            </div>
+
+            <button>Shop</button>
+          </div>
+
+        </div>
+
+        <!-- Card 2 -->
+        <div class="tl-review-card tl-green">
+
+          <div class="tl-review-content">
+            <h2>
+              “This drink is incredibly refreshing, especially when served over ice. It’s light, crisp, and instantly
+              cooling, making it perfect for a quick refresh any time of day.”
+            </h2>
+
+            <p>Jacob K.</p>
+          </div>
+
+          <div class="tl-review-product">
+            <div class="tl-review-product-left">
+              <img src="//www.twoleavestea.com/cdn/shop/files/Organic-Mtn-High-Chai-R15-angle_square_KO_1.png?v=1770085601&width=144" alt="">
+              
+
+              <span>
+                ORGANIC<br>
+                MATCHA<br>
+                MINT
+              </span>
+            </div>
+
+            <button>Shop</button>
+          </div>
+
+        </div>
+
+        <!-- Card 3 -->
+        <div class="tl-review-card tl-yellow">
+
+          <div class="tl-review-content">
+            <h2>
+              “One sip and you can feel the difference—clean energy, rich flavor, and all the good stuff your body
+              loves. Literally liquid GOLD.”
+            </h2>
+
+            <p>Harrison G.</p>
+          </div>
+
+          <div class="tl-review-product">
+            <div class="tl-review-product-left">
+              <img src="//www.twoleavestea.com/cdn/shop/files/Organic-Mtn-High-Chai-R15-angle_square_KO_1_1.png?v=1770085950&width=144" alt="">
+
+              <span>
+                TWO ROOTS<br>
+                GOLDEN<br>
+                LATTE MIX
+              </span>
+            </div>
+
+            <button>Shop</button>
+          </div>
+
+        </div>
+
+        <!-- Card 4 -->
+        <div class="tl-review-card tl-lime">
+
+          <div class="tl-review-content">
+            <h2>
+              “Soo tasty and energizing.”
+            </h2>
+
+            <p>Gracie M.</p>
+          </div>
+
+          <div class="tl-review-product">
+            <div class="tl-review-product-left">
+              <img
+                src="//www.twoleavestea.com/cdn/shop/files/Organic-Mtn-High-Chai-R15-angle_square_KO_1_3.png?v=1770086264&width=144"
+                alt="">
+
+              <span>
+                ORGANIC<br>
+                TROPICAL<br>
+                GREEN TEA
+              </span>
+            </div>
+
+            <button>Shop</button>
+          </div>
+
+        </div>
+
+        <!-- Card 5 -->
+        <div class="tl-review-card tl-purple">
+
+          <div class="tl-review-content">
+            <h2>
+              “The perfect start<br>
+              to my day.”
+            </h2>
+
+            <p>Jorge F.</p>
+          </div>
+
+          <div class="tl-review-product">
+            <div class="tl-review-product-left">
+              <img
+                src="//www.twoleavestea.com/cdn/shop/files/Organic-Mtn-High-Chai-R15-angle_square_KO_1_4.png?v=1770086316&width=144"
+                alt="">
+
+              <span>
+                JASMINE<br>
+                PETAL
+              </span>
+            </div>
+
+            <button>Shop</button>
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
   </main>
 </body>

@@ -9,85 +9,213 @@
 }
 
 @font-face {
-    font-family:  Midnight;
+    font-family: Midnight;
     src: url(./fonts//midnight-sans-rd-12-medium-trial.otf);
 }
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
+
+html,
+body{
     width: 100%;
     height: 100%;
 }
+
 main{
     width: 100%;
-    min-height: 100vh;/* min height is used for giving minimum height to element*/
+    min-height: 100vh;
     background-color: #FBF9EB;
-   
- 
-
+    overflow-x: hidden;
 }
 
-nav{
-   width: 100%;
- background-color: #FFFEFB;
- display: flex;
- align-items: center;
- justify-content: space-between;
- font-family: Reckless;
-  padding: 0.8rem 1rem;
-   font-size: 0.8rem;
-   position: sticky;
-
-}
-nav i{
-    font-size: 2rem;
-    width: 33%;
-}
-nav .nav-part-1{
-    display: flex;
-    gap: 1rem;
-    width: 33%;
-    display: none;
-   
-}
-.nav-part-1 h3{
-font-weight: 300;
-}
-
-nav .nav-part-2{
-    width: 20%;
-    height: auto;
-    display: flex;
-    
-}
-
-.nav-part-2 img{
+.tl-navbar{
     width: 100%;
-    object-fit: cover;
-}
-
-.nav-part-3{
-    display: flex;
-    width: 30%;
-   gap: 2rem;
-   align-items: center;
-    justify-content: end;
+    height: 72px;
+    background-color: #FFFEFB;
     
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 2rem;
+
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    font-family: Reckless;
 }
 
-.nav-part-3 h3{
-font-weight: 300;
-display: none;
+.tl-nav-left{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 33%;
 }
 
-.nav-part-3 svg{
-   width: 30px;
-   height: 30px;
+.tl-nav-left a{
+    text-decoration: none;
+    color: #1D1B18;
 
+    font-size: 2rem;
+    font-weight: 300;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
+
+.tl-nav-left span{
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background-color: #DCE9F7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.8rem;
+
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+.tl-nav-left a:nth-child(2) span{
+    background-color: #F6C23A;
+}
+
+.tl-nav-left a:nth-child(3) span{
+    background-color: #FFC82E;
+}
+
+.tl-nav-center{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.tl-nav-center img{
+    width: 150px;
+    object-fit: contain;
+}
+
+.tl-nav-right{
+    width: 33%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 2rem;
+}
+
+.tl-nav-right a{
+    text-decoration: none;
+
+    color: #1D1B18;
+
+    font-family: Figtree;
+    font-size: 0.82rem;
+
+    letter-spacing: 1.6px;
+    font-weight: 600;
+}
+
+.tl-cart-wrap{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tl-cart-count{
+    position: absolute;
+
+    right: -10px;
+    top: 2px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background-color: #FFC107;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.7rem;
+    font-family: Figtree;
+    font-weight: 700;
+
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+@media (max-width:1024px){
+
+    .tl-navbar{
+        padding: 0 1rem;
+        height: 64px;
+    }
+
+    .tl-nav-left{
+        gap: 1rem;
+    }
+
+    .tl-nav-left a{
+        font-size: 1.2rem;
+    }
+
+    .tl-nav-right{
+        display: none;
+    }
+
+    .tl-nav-center{
+        width: auto;
+    }
+
+    .tl-nav-left{
+        width: auto;
+    }
+
+    .tl-nav-center img{
+        width: 120px;
+    }
+}
+
+@media (max-width:768px){
+
+    .tl-navbar{
+        justify-content: space-between;
+    }
+
+    .tl-nav-left a:nth-child(2),
+    .tl-nav-left a:nth-child(3){
+        display: none;
+    }
+
+    .tl-nav-left a{
+        font-size: 1.5rem;
+    }
+
+    .tl-nav-center img{
+        width: 110px;
+    }
+}
+/* =========================================
+   HERO SECTION
+========================================= */
 
 #section-1{
     width: 100%;
@@ -106,21 +234,19 @@ display: none;
 
 #section-1 h1{
     font-size: clamp(3.5rem,5vw,5rem);
-font-family: Reckless;
-color: black;
-font-weight: 500;
-
+    font-family: Reckless;
+    color: black;
+    font-weight: 500;
 }
 
 #section-1 p{
     font-size: clamp(1.2rem,1vw,1rem);
     font-family: Figtree;
-    font-weight: 400;       
+    font-weight: 400;
     color: black;
 }
 
 #section-1 button{
-   
     padding: 1.2rem;
     border: none;
     background-color: #2A2857;
@@ -130,11 +256,15 @@ font-weight: 500;
     font-size: 1.1rem;
 }
 
+/* =========================================
+   SECTION 2
+========================================= */
+
 #section-2{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 8rem 1rem;
-    
+    overflow: hidden;
 }
 
 #section-2 .section2-text{
@@ -143,16 +273,14 @@ font-weight: 500;
     align-items: center;
     justify-content: center;
     font-family: Reckless;
-       text-align: center;
+    text-align: center;
 }
 
 .section2-text h1{
      font-size: clamp(2.2rem,8vw,6rem);
      font-weight: 300;
      width: 80%;
-  
 }
-
 
 #section-2 .btn-1{
     color: #000;
@@ -166,28 +294,37 @@ font-weight: 500;
     margin-top: 5rem;
     rotate: -5deg;
     letter-spacing: 2px;
+    border: none;
 }
+
+/* =========================================
+   CARD CONTAINER
+========================================= */
 
 #section-2 .card-container{
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem 0 3rem;
+    margin-top: 4rem;
     display: flex;
+    gap: 1.5rem;
     overflow-x: auto;
+}
 
-}
 .card-container::-webkit-scrollbar{
-  display: none;
+    display: none;
 }
+
 .card{
-    display:flex ;
+    width: 320px;
+    flex-shrink: 0;
+    display:flex;
     flex-direction: column;
     gap: 1rem;
-    flex-shrink: 0;
 }
+
 .card-top{
-    width: 90%;
+    width: 100%;
     height: 35vh;
-    /* background-color: #; */
     position: relative;
     padding: 1rem;
     display: flex;
@@ -205,179 +342,569 @@ font-weight: 500;
     display: flex;
     align-items: end;
     justify-content: space-between;
-
-    button{
-        color: #000;
-    }
-    
+    z-index: 2;
 }
+
 .card-top-text button{
     padding: 0.2rem 0.5rem;
     border-radius: 0.2rem;
     border: 1px solid #000;
-   background-color: #fff;
-   font-family: Midnight;
-   font-size: 1.2rem;
-   text-transform: uppercase;
-   display: block;
-   
-   font-weight: 400;
+    background-color: #fff;
+    font-family: Midnight;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
 }
+
 .card-top-text span{
     font-size: 1.2rem;
     font-family: Reckless;
 }
+
 .card-top img{
     height: 90%;
     width: 90%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-  position: absolute;
-  transition: all ease 0.3s;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    transition: all ease 0.3s;
 }
-
 
 .card-btm-text{
     background-color: #fff;
-    padding: 0.6rem 0.5rem;
+    padding: 0.6rem 0.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
     font-family: Reckless;
     font-size: 1.2rem;
+    z-index: 2;
 }
 
 .card-top:hover img{
-    scale: 1.1;
+    scale: 1.08;
 }
 
 .card-btm{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-     font-family: Reckless;
-     align-items: start;
+    font-family: Reckless;
+    align-items: start;
 }
 
 .card-btm h1{
- font-family: 0.3rem;
- font-weight: 100;
+    font-size: 1.6rem;
+    font-weight: 300;
 }
 
 .card-btm h3{
- font-family: 0.3rem;
- font-weight: 100;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
+
 .card-btm p{
- font-weight: 100;
-opacity: 0.5;
-width: 90%;
+    font-size: 1rem;
+    font-weight: 100;
+    opacity: 0.5;
+    width: 95%;
+    line-height: 1.6;
 }
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
 
 .btn-container{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
 }
+
 .btm-btn{
-    
-   padding: 1.2rem;
-    border: none;
-    background-color: #2A2857;
-    color: white;
-    font-family: Figtree;
+   padding: 1.2rem 2rem;
+   border: none;
+   background-color: #2A2857;
+   color: white;
+   font-family: Figtree;
+   border-radius: 1.2rem;
+   font-size: 1.1rem;
+}
+
+/* =========================================
+   DISCOVER SECTION
+========================================= */
+
+.tl-discover-section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F8F6E8;
+    padding: 6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tl-discover-badge{
+    background-color: #F88B38;
+    border: 2px solid #222;
+    border-radius: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    rotate: -2deg;
+    margin-bottom: 2rem;
+}
+
+.tl-discover-badge span{
+    font-family: Midnight;
+    font-size: clamp(2rem,4vw,4.5rem);
+    color: #111;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.tl-discover-heading{
+    width: 100%;
+    max-width: 1100px;
+}
+
+.tl-discover-heading h1{
+    font-family: Reckless;
+    font-size: clamp(3rem,6vw,7rem);
+    line-height: 1.05;
+    font-weight: 300;
+    color: #1B1A17;
+    letter-spacing: -2px;
+}
+
+.tl-discover-heading em{
+    font-style: italic;
+}
+
+.tl-search-wrap{
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.tl-search-input{
+    width: 100%;
+    max-width: 620px;
+    height: 92px;
+    border: 1.5px solid #373737;
     border-radius: 1.2rem;
-    font-size: 1.1rem;
-    
+    background: transparent;
+    outline: none;
+    padding: 0 2.5rem;
+    font-size: 2.2rem;
+    font-family: Reckless;
+    color: #222;
 }
-@media (min-width:768px) {
-    
+
+.tl-search-input::placeholder{
+    color: #9E998D;
 }
+
+.tl-vibe-label{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+}
+
+.tl-vibe-label p{
+    font-family: Figtree;
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    color: #222;
+}
+
+.tl-chip-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1200px;
+}
+
+.tl-chip{
+    border: 1px solid #4A4A4A;
+    background-color: #DDE7F5;
+    color: #1C1C1C;
+    padding: 1rem 1.8rem;
+    border-radius: 1rem;
+    font-family: Reckless;
+    font-size: clamp(1.4rem,2vw,2.5rem);
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: all ease 0.25s;
+}
+
+.tl-chip:hover{
+    background-color: #1C1C1C;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
 
 @media (min-width:1024px) {
 
     nav{
-   width: 100%;
- background-color: #FFFEFB;
- display: flex;
- align-items: center;
- justify-content: space-between;
- font-family: Reckless;
-  padding: 0.5rem 1rem;
-   font-size: 0.8rem;
-   position: sticky;
+        padding: 0.5rem 1rem;
+    }
 
-}
     nav .nav-part-1{
-    display: flex;
-    gap: 1rem;
-    width: 30%;
-   
-   
-   
+        display: flex;
+        gap: 1rem;
+        width: 30%;
+    }
+
+    nav i{
+        display: none;
+    }
+
+    .nav-part-1 h3{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    nav .nav-part-2{
+        width: 5%;
+    }
+
+    .nav-part-3{
+        width: 40%;
+        gap: 1rem;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .nav-part-3 h3{
+        font-weight: 300;
+        display: block;
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    #section-1{
+        text-align: start;
+        padding: 3rem 2rem;
+        background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2250.0);
+    }
+
+    #section-1 h1{
+        width: 20%;
+    }
+
+    #section-1 p{
+        width: 20%;
+    }
+
+    #section-1 button{
+        width: fit-content;
+        padding: 1rem 4rem;
+    }
+
+    #section-2 .btn-1{
+        display: none;
+    }
+
+    .section2-text h1{
+        width: 50%;
+    }
+
+    .card-container{
+        margin-top: 6rem;
+    }
+
+    .card{
+        width: 470px;
+    }
+
+    .card-top{
+        height: 52vh;
+    }
+
+    .tl-discover-section{
+        padding: 8rem 2rem;
+    }
 }
-nav i{
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .tl-discover-section{
+        padding: 4rem 1rem;
+    }
+
+    .tl-search-input{
+        height: 74px;
+        font-size: 1.6rem;
+        padding: 0 1.5rem;
+    }
+
+    .tl-vibe-label{
+        margin-top: 6rem;
+    }
+
+    .tl-chip{
+        padding: 0.9rem 1.2rem;
+        border-radius: 0.8rem;
+    }
+
+    .tl-discover-heading h1{
+        line-height: 1.12;
+    }
+
+    .card{
+        width: 85vw;
+    }
+}
+
+
+/* =========================================
+   REVIEWS SECTION
+========================================= */
+
+.tl-reviews-section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F8F6E8;
+    padding: 6rem 1.5rem;
+    overflow: hidden;
+}
+
+/* =========================================
+   BADGE
+========================================= */
+
+.tl-reviews-badge{
+    width: fit-content;
+    background-color: #79C91B;
+    border: 2px solid #222;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    rotate: -2deg;
+    margin-bottom: 2rem;
+}
+
+.tl-reviews-badge span{
+    font-family: Midnight;
+    font-size: clamp(2rem,4vw,4.5rem);
+    letter-spacing: 2px;
+    color: #111;
+    line-height: 1;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.tl-reviews-heading{
+    width: 100%;
+    max-width: 1100px;
+}
+
+.tl-reviews-heading h1{
+    font-family: Reckless;
+    font-size: clamp(3rem,6vw,7rem);
+    line-height: 1.05;
+    font-weight: 300;
+    color: #1A1917;
+    letter-spacing: -2px;
+}
+
+.tl-reviews-heading em{
+    font-style: italic;
+}
+
+/* =========================================
+   REVIEW GRID
+========================================= */
+
+.tl-review-grid{
+    width: 100%;
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: auto;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.tl-review-grid::-webkit-scrollbar{
     display: none;
 }
 
-.nav-part-1 h3{
-  font-size: 1.5rem;
-font-weight: 300;
-}
+/* =========================================
+   REVIEW CARD
+========================================= */
 
-nav .nav-part-2{
-    width: 5%;
+.tl-review-card{
+    width: 320px;
+    min-height: 650px;
+    border: 1.5px solid #222;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    flex-shrink: 0;
 
     display: flex;
-    
-}
-.nav-part-3{
-    display: flex;
-    width: 40%;
-    gap: 1rem;
-    justify-content: end;
-    align-items: end;
- 
-}
-.nav-part-3 h3{
-font-weight: 300;
-display: block;
-font-size: 1.5rem;
-white-space: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: all ease 0.3s;
 }
 
-#section-1{
+.tl-review-card:hover{
+    transform: translateY(-6px);
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.tl-review-content{
     width: 100%;
-   text-align: start;
-   padding: 3rem 2rem;
-   background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2250.0);
-   background-size: cover;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
 
-#section-1 h1{
-    width: 20%;
-}
-#section-1 p{
-    width: 20%;
-}
-
-#section-1 button{
-    width: fit-content;
-    padding: 1rem 4rem;
-    border-radius: 1.2rem,;
+.tl-review-content h2{
+    font-family: Reckless;
+    font-size: clamp(2rem,2vw,3rem);
+    line-height: 1.25;
+    font-weight: 300;
+    color: #1D1B18;
 }
 
-#section-2  .btn-1{
-   display: none;
+.tl-review-content p{
+    margin-top: 1.5rem;
+    font-family: Figtree;
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.5);
 }
-.section2-text h1{
-    width: 50%;
-  
+
+/* =========================================
+   PRODUCT FOOTER
+========================================= */
+
+.tl-review-product{
+    width: 100%;
+    min-height: 86px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
 }
-.card-container{
-    margin-top: 8rem;
+
+.tl-review-product-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
+
+.tl-review-product-left img{
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+    border-right: 1px solid rgba(0,0,0,0.4);
+    padding: 0.4rem;
+}
+
+.tl-review-product-left span{
+    font-family: Midnight;
+    font-size: 1rem;
+    line-height: 0.95;
+    color: #111;
+    letter-spacing: 0.5px;
+}
+
+.tl-review-product button{
+    margin-right: 0.8rem;
+    width: 72px;
+    height: 54px;
+    border-radius: 999px;
+    border: 1px solid #222;
+    background-color: #fff;
+    font-family: Figtree;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all ease 0.25s;
+}
+
+.tl-review-product button:hover{
+    background-color: #111;
+    color: #fff;
+}
+
+/* =========================================
+   CARD COLORS
+========================================= */
+
+.tl-peach{
+    background-color: #F3AE89;
+}
+
+.tl-green{
+    background-color: #A8D66F;
+}
+
+.tl-yellow{
+    background-color: #FFD462;
+}
+
+.tl-lime{
+    background-color: #A9DC6D;
+}
+
+.tl-purple{
+    background-color: #CFB8DD;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width:768px){
+
+    .tl-reviews-section{
+        padding: 4rem 1rem;
+    }
+
+    .tl-review-card{
+        width: 85vw;
+        min-height: 560px;
+    }
+
+    .tl-review-content h2{
+        font-size: 2.2rem;
+    }
+
+    .tl-review-product-left span{
+        font-size: 0.8rem;
+    }
+
+    .tl-review-product button{
+        width: 60px;
+        height: 48px;
+        font-size: 1rem;
+    }
 }
